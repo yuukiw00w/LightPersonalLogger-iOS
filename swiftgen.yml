@@ -1,0 +1,27 @@
+input_dir: LightPersonalLogger
+output_dir: LightPersonalLogger/Constants/SwiftGen
+strings:
+  inputs: Resources/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: Strings.swift
+xcassets:
+  inputs:
+    - Resources/Images.xcassets
+    - Resources/Colors.xcassets
+  outputs:
+    templateName: swift5
+    output: Asset.swift
+ib:
+  inputs: Resources/Storyboards
+  outputs:
+    - templateName: scenes-swift5
+      output: Storyboards.swift
+    - templateName: segues-swift5
+      output: Segues.swift
+plist:
+  inputs: 
+    - Resources/Info.plist
+  outputs:
+    templateName: runtime-swift5
+    output: Plist.swift

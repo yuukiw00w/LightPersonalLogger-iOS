@@ -15,6 +15,11 @@
 		2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */; };
 		2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D4B265F0EF600F064FE /* Colors.xcassets */; };
 		2A837D50265F0FF600F064FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D4F265F0FF600F064FE /* Localizable.strings */; };
+		2A837D5E265F112500F064FE /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D5B265F112500F064FE /* Asset.swift */; };
+		2A837D5F265F112500F064FE /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D5C265F112500F064FE /* Plist.swift */; };
+		2A837D60265F112500F064FE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D5D265F112500F064FE /* Strings.swift */; };
+		2A837D64265F115B00F064FE /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D62265F115B00F064FE /* Segues.swift */; };
+		2A837D65265F115B00F064FE /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D63265F115B00F064FE /* Storyboards.swift */; };
 		DE194566832722EF1CAE2FD0 /* Pods_LightPersonalLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		2A837D28265F08FF00F064FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A837D4B265F0EF600F064FE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2A837D4F265F0FF600F064FE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2A837D5B265F112500F064FE /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		2A837D5C265F112500F064FE /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		2A837D5D265F112500F064FE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2A837D62265F115B00F064FE /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		2A837D63265F115B00F064FE /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPersonalLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.release.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.release.xcconfig"; sourceTree = "<group>"; };
 		BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.debug.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +77,7 @@
 		2A837D19265F08FE00F064FE /* LightPersonalLogger */ = {
 			isa = PBXGroup;
 			children = (
+				2A837D57265F109300F064FE /* Constants */,
 				2A837D46265F0E9100F064FE /* Features */,
 				2A837D45265F0E8500F064FE /* Resources */,
 			);
@@ -120,6 +131,26 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		2A837D57265F109300F064FE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D58265F109700F064FE /* SwiftGen */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2A837D58265F109700F064FE /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D5B265F112500F064FE /* Asset.swift */,
+				2A837D5C265F112500F064FE /* Plist.swift */,
+				2A837D62265F115B00F064FE /* Segues.swift */,
+				2A837D63265F115B00F064FE /* Storyboards.swift */,
+				2A837D5D265F112500F064FE /* Strings.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		5EE1BC0AEC996BD9678A29FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +178,7 @@
 				6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */,
 				2A837D33265F0B0100F064FE /* Run Swift Format */,
 				2A837D3B265F0CA300F064FE /* Run Swift Lint */,
+				2A837D59265F10C800F064FE /* Run SwiftGen */,
 				2A837D13265F08FD00F064FE /* Sources */,
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
@@ -244,6 +276,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
+		2A837D59265F10C800F064FE /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/SwiftGen\n";
+		};
 		6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,8 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A837D65265F115B00F064FE /* Storyboards.swift in Sources */,
+				2A837D5F265F112500F064FE /* Plist.swift in Sources */,
 				2A837D1F265F08FE00F064FE /* ViewController.swift in Sources */,
 				2A837D1B265F08FE00F064FE /* AppDelegate.swift in Sources */,
+				2A837D64265F115B00F064FE /* Segues.swift in Sources */,
+				2A837D5E265F112500F064FE /* Asset.swift in Sources */,
+				2A837D60265F112500F064FE /* Strings.swift in Sources */,
 				2A837D1D265F08FE00F064FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
