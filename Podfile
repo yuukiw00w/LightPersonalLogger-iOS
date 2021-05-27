@@ -7,6 +7,8 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'LightPersonalLogger' do
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   pod 'LicensePlist'
   pod 'SwiftFormat/CLI'
   pod 'SwiftGen'

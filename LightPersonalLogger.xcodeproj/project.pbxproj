@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A304DF526633F15007A903D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A304DF426633F15007A903D /* GoogleService-Info.plist */; };
 		2A837D1B265F08FE00F064FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1A265F08FE00F064FE /* AppDelegate.swift */; };
 		2A837D1D265F08FE00F064FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1C265F08FE00F064FE /* SceneDelegate.swift */; };
 		2A837D1F265F08FE00F064FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1E265F08FE00F064FE /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A304DF426633F15007A903D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A837D17265F08FE00F064FE /* LightPersonalLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightPersonalLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A837D1A265F08FE00F064FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A837D1C265F08FE00F064FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		2A837D19265F08FE00F064FE /* LightPersonalLogger */ = {
 			isa = PBXGroup;
 			children = (
+				2A304DF426633F15007A903D /* GoogleService-Info.plist */,
 				2A837D57265F109300F064FE /* Constants */,
 				2A837D46265F0E9100F064FE /* Features */,
 				2A837D45265F0E8500F064FE /* Resources */,
@@ -186,6 +189,7 @@
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
 				2A837D6D265F11A600F064FE /* Run LicensePlist */,
+				94319A25664D72F1115FA472 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +243,7 @@
 				2A837D24265F08FF00F064FE /* Images.xcassets in Resources */,
 				2A837D70265F11E700F064FE /* Settings.bundle in Resources */,
 				2A837D22265F08FE00F064FE /* Main.storyboard in Resources */,
+				2A304DF526633F15007A903D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +342,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94319A25664D72F1115FA472 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
