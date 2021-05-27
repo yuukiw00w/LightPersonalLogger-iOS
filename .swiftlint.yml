@@ -1,0 +1,27 @@
+included:
+  - LightPersonalLogger
+disabled_rules:
+  - trailing_whitespace
+  - force_cast
+  - force_try
+  - opening_brace
+opt_in_rules:
+  - private_action
+  - private_outlet
+  - yoda_condition
+file_length:
+  warning: 650
+type_body_length:
+  warning: 400
+cyclomatic_complexity:
+  warning: 30
+function_body_length:
+  warning: 110
+line_length:
+  warning: 187
+identifier_name:
+  min_length:
+    warning: 1
+    error: 1
+excluded:
+  - Pods

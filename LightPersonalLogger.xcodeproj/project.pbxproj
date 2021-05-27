@@ -100,6 +100,7 @@
 			buildPhases = (
 				6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */,
 				2A837D33265F0B0100F064FE /* Run Swift Format */,
+				2A837D3B265F0CA300F064FE /* Run Swift Lint */,
 				2A837D13265F08FD00F064FE /* Sources */,
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
@@ -176,6 +177,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --ifdef noindent --disable strongOutlets,trailingCommas,wrapMultilineStatementBraces,redundantType --swiftversion 5\n";
+		};
+		2A837D3B265F0CA300F064FE /* Run Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
 		6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -8,6 +8,7 @@ inhibit_all_warnings!
 
 target 'LightPersonalLogger' do
   pod 'SwiftFormat/CLI'
+  pod 'SwiftLint'
 end
 
 post_install do | installer |
