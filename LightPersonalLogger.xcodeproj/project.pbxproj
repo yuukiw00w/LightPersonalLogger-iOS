@@ -11,8 +11,9 @@
 		2A837D1D265F08FE00F064FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1C265F08FE00F064FE /* SceneDelegate.swift */; };
 		2A837D1F265F08FE00F064FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1E265F08FE00F064FE /* ViewController.swift */; };
 		2A837D22265F08FE00F064FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D20265F08FE00F064FE /* Main.storyboard */; };
-		2A837D24265F08FF00F064FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D23265F08FF00F064FE /* Assets.xcassets */; };
+		2A837D24265F08FF00F064FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D23265F08FF00F064FE /* Images.xcassets */; };
 		2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */; };
+		2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D4B265F0EF600F064FE /* Colors.xcassets */; };
 		DE194566832722EF1CAE2FD0 /* Pods_LightPersonalLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,9 +23,10 @@
 		2A837D1C265F08FE00F064FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A837D1E265F08FE00F064FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A837D21265F08FE00F064FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A837D23265F08FF00F064FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A837D23265F08FF00F064FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2A837D26265F08FF00F064FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A837D28265F08FF00F064FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A837D4B265F0EF600F064FE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPersonalLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.release.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.release.xcconfig"; sourceTree = "<group>"; };
 		BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.debug.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,15 +65,56 @@
 		2A837D19265F08FE00F064FE /* LightPersonalLogger */ = {
 			isa = PBXGroup;
 			children = (
-				2A837D1A265F08FE00F064FE /* AppDelegate.swift */,
-				2A837D1C265F08FE00F064FE /* SceneDelegate.swift */,
-				2A837D1E265F08FE00F064FE /* ViewController.swift */,
-				2A837D20265F08FE00F064FE /* Main.storyboard */,
-				2A837D23265F08FF00F064FE /* Assets.xcassets */,
-				2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */,
-				2A837D28265F08FF00F064FE /* Info.plist */,
+				2A837D46265F0E9100F064FE /* Features */,
+				2A837D45265F0E8500F064FE /* Resources */,
 			);
 			path = LightPersonalLogger;
+			sourceTree = "<group>";
+		};
+		2A837D45265F0E8500F064FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D28265F08FF00F064FE /* Info.plist */,
+				2A837D4B265F0EF600F064FE /* Colors.xcassets */,
+				2A837D23265F08FF00F064FE /* Images.xcassets */,
+				2A837D49265F0EBF00F064FE /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A837D46265F0E9100F064FE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D48265F0EA300F064FE /* AppDelegate */,
+				2A837D47265F0E9F00F064FE /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2A837D47265F0E9F00F064FE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D1E265F08FE00F064FE /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2A837D48265F0EA300F064FE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D1A265F08FE00F064FE /* AppDelegate.swift */,
+				2A837D1C265F08FE00F064FE /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2A837D49265F0EBF00F064FE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */,
+				2A837D20265F08FE00F064FE /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		5EE1BC0AEC996BD9678A29FA /* Frameworks */ = {
@@ -152,7 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */,
-				2A837D24265F08FF00F064FE /* Assets.xcassets in Resources */,
+				2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */,
+				2A837D24265F08FF00F064FE /* Images.xcassets in Resources */,
 				2A837D22265F08FE00F064FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +421,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMH4JSC3SW;
-				INFOPLIST_FILE = LightPersonalLogger/Info.plist;
+				INFOPLIST_FILE = LightPersonalLogger/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMH4JSC3SW;
-				INFOPLIST_FILE = LightPersonalLogger/Info.plist;
+				INFOPLIST_FILE = LightPersonalLogger/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
