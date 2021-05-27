@@ -13,6 +13,7 @@
 		2A837D22265F08FE00F064FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D20265F08FE00F064FE /* Main.storyboard */; };
 		2A837D24265F08FF00F064FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D23265F08FF00F064FE /* Assets.xcassets */; };
 		2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */; };
+		DE194566832722EF1CAE2FD0 /* Pods_LightPersonalLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		2A837D23265F08FF00F064FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A837D26265F08FF00F064FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A837D28265F08FF00F064FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPersonalLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.release.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.release.xcconfig"; sourceTree = "<group>"; };
+		BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.debug.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE194566832722EF1CAE2FD0 /* Pods_LightPersonalLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2A837D19265F08FE00F064FE /* LightPersonalLogger */,
 				2A837D18265F08FE00F064FE /* Products */,
+				C1D1E0FD0A41163663C244B0 /* Pods */,
+				5EE1BC0AEC996BD9678A29FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = LightPersonalLogger;
 			sourceTree = "<group>";
 		};
+		5EE1BC0AEC996BD9678A29FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1D1E0FD0A41163663C244B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */,
+				7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A837D2B265F08FF00F064FE /* Build configuration list for PBXNativeTarget "LightPersonalLogger" */;
 			buildPhases = (
+				6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */,
+				2A837D33265F0B0100F064FE /* Run Swift Format */,
 				2A837D13265F08FD00F064FE /* Sources */,
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
@@ -131,6 +157,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A837D33265F0B0100F064FE /* Run Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --ifdef noindent --disable strongOutlets,trailingCommas,wrapMultilineStatementBraces,redundantType --swiftversion 5\n";
+		};
+		6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightPersonalLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A837D13265F08FD00F064FE /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		2A837D2C265F08FF00F064FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		2A837D2D265F08FF00F064FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
