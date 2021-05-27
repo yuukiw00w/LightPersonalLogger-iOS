@@ -20,6 +20,7 @@
 		2A837D60265F112500F064FE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D5D265F112500F064FE /* Strings.swift */; };
 		2A837D64265F115B00F064FE /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D62265F115B00F064FE /* Segues.swift */; };
 		2A837D65265F115B00F064FE /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D63265F115B00F064FE /* Storyboards.swift */; };
+		2A837D70265F11E700F064FE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D6F265F11E700F064FE /* Settings.bundle */; };
 		DE194566832722EF1CAE2FD0 /* Pods_LightPersonalLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		2A837D5D265F112500F064FE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2A837D62265F115B00F064FE /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		2A837D63265F115B00F064FE /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		2A837D6F265F11E700F064FE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4362323347AEB59272881C2C /* Pods_LightPersonalLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPersonalLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC6C0E60277442309010398 /* Pods-LightPersonalLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.release.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.release.xcconfig"; sourceTree = "<group>"; };
 		BAA91F6B512EB89878D13AE6 /* Pods-LightPersonalLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPersonalLogger.debug.xcconfig"; path = "Target Support Files/Pods-LightPersonalLogger/Pods-LightPersonalLogger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		2A837D45265F0E8500F064FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A837D6F265F11E700F064FE /* Settings.bundle */,
 				2A837D28265F08FF00F064FE /* Info.plist */,
 				2A837D4F265F0FF600F064FE /* Localizable.strings */,
 				2A837D4B265F0EF600F064FE /* Colors.xcassets */,
@@ -182,6 +185,7 @@
 				2A837D13265F08FD00F064FE /* Sources */,
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
+				2A837D6D265F11A600F064FE /* Run LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -233,6 +237,7 @@
 				2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */,
 				2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */,
 				2A837D24265F08FF00F064FE /* Images.xcassets in Resources */,
+				2A837D70265F11E700F064FE /* Settings.bundle in Resources */,
 				2A837D22265F08FE00F064FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +298,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftGen/bin/SwiftGen\n";
+		};
+		2A837D6D265F11A600F064FE /* Run LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run LicensePlist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Resources/Settings.bundle\nfi\n";
 		};
 		6C578858C7C0C6529E9A13AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

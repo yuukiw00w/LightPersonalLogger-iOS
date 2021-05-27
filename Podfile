@@ -7,6 +7,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'LightPersonalLogger' do
+  pod 'LicensePlist'
   pod 'SwiftFormat/CLI'
   pod 'SwiftGen'
   pod 'SwiftLint'
