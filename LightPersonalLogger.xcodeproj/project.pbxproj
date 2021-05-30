@@ -185,9 +185,11 @@
 				2A837D33265F0B0100F064FE /* Run Swift Format */,
 				2A837D3B265F0CA300F064FE /* Run Swift Lint */,
 				2A837D59265F10C800F064FE /* Run SwiftGen */,
+				2A304DFF266340AA007A903D /* Run Copy Google-Service-Info.plist */,
 				2A837D13265F08FD00F064FE /* Sources */,
 				2A837D14265F08FD00F064FE /* Frameworks */,
 				2A837D15265F08FD00F064FE /* Resources */,
+				2A304DFE26633FAA007A903D /* Run Restore Google-Service-Info.plist */,
 				2A837D6D265F11A600F064FE /* Run LicensePlist */,
 				94319A25664D72F1115FA472 /* [CP] Embed Pods Frameworks */,
 			);
@@ -250,6 +252,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A304DFE26633FAA007A903D /* Run Restore Google-Service-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Restore Google-Service-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Release\" ]; then\n  echo \"When Release, no needs to restore.\"\nelse\n  echo \"Restore GoogleService-info.plist\"\n  cp -f ${SRCROOT}/${PRODUCT_NAME}/GoogleService-Info_prod.plist ${SRCROOT}/${PRODUCT_NAME}/GoogleService-info.plist\nfi\n";
+		};
+		2A304DFF266340AA007A903D /* Run Copy Google-Service-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Copy Google-Service-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Release\" ]; then\n  echo \"When Release, no needs to copy.\"\nelse\n  echo \"Copy GoogleService-info.plist\"\n  cp -f ${SRCROOT}/${PRODUCT_NAME}/GoogleService-Info_dev.plist ${SRCROOT}/${PRODUCT_NAME}/GoogleService-info.plist\nfi\n";
+		};
 		2A837D33265F0B0100F064FE /* Run Swift Format */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,7 +616,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.yn.light.LightPersonalLogger;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yn.light.LightPersonalLogger.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
