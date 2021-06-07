@@ -1,0 +1,146 @@
+fastlane_require 'date'
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    if !is_ci
+      ensure_git_status_clean
+    end
+  end
+
+  after_all do
+  end
+
+  # Public lane
+  lane :dev do
+    scheme = 'LightPersonalLogger dev'
+    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    export_options = {
+      provisioningProfiles: {
+        app_identifier => "LightPersonalLogger Dev"
+      }
+    }
+    sigh_and_build(
+        scheme: scheme,
+        app_identifier: app_identifier,
+        development: false,
+        export_method: 'enterprise',
+        export_options: export_options
+    )
+
+    firebase_app_dist(
+        app_id: "1:814476773214:ios:10a4aee38ac3a8b4a431cf",
+        scheme: scheme
+    )
+  end
+
+  lane :deploy do
+    store(scheme: 'LightPersonalLogger')
+  end
+
+  # Private lane
+  private_lane :sigh_and_build do |options|
+    scheme = options[:scheme]
+    app_identifier = options[:app_identifier]
+    development = !options[:development].nil? ? options[:development] : true
+    export_method = options[:export_method] || 'development'
+    environment = scheme.upcase
+    export_options = options[:export_options]
+
+    increment_build_number
+    
+    test(scheme: scheme)
+    sigh(
+      app_identifier: app_identifier,
+      output_path: 'Certificates',
+      development: development
+    )
+    build(scheme: scheme, export_method: export_method, export_options: export_options, add_badge: true)
+    rocket
+    if !is_ci
+      clean_build_artifacts
+    end
+  end
+
+  private_lane :store do |options|
+    scheme = options[:scheme]
+
+    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    export_options = {
+      provisioningProfiles: {
+        app_identifier => "LightPersonalLogger"
+      }
+    }
+    build(scheme: scheme, export_options: export_options)
+    api_key = app_store_connect_api_key(
+      key_id: ENV["ASC_API_KEY_ID"],
+      issuer_id: ENV["ASC_API_ISSUER_ID"],
+      key_filepath: ENV["ASC_API_KEY_FILEPATH"],
+      in_house: false,
+    )
+    deliver(
+      api_key: api_key,
+      force: true,
+      skip_metadata: true,
+      precheck_include_in_app_purchases: false
+    )
+    rocket
+  end
+
+  # Util lane
+
+  private_lane :build do |options|
+    scheme = options[:scheme]
+    export_method = options[:export_method] || 'app-store'
+    export_options = options[:export_options]
+    add_badge = options[:add_badge] || false
+
+    update_badge(scheme: scheme) if add_badge
+
+    build_number = ENV['BITRISE_BUILD_NUMBER'] || Action.sh('git rev-list HEAD --count').strip
+    increment_build_number(
+      build_number: build_number
+    )
+
+    gym(
+      scheme: "#{scheme}",
+      clean: true,
+      silent: true,
+      include_bitcode: false,
+      workspace: 'LightPersonalLogger.xcworkspace',
+      output_directory: '../',
+      output_name: 'LightPersonalLogger.ipa',
+      export_method: export_method,
+      export_options: export_options
+    )
+  end
+
+  private_lane :update_badge do |options|
+    scheme = options[:scheme]
+    environment = scheme.gsub(/\s+/m, ' ').strip.split(" ").last.upcase
+    version = get_version_number(
+      xcodeproj: "LightPersonalLogger.xcodeproj",
+      target: "LightPersonalLogger"
+    )
+    add_badge(shield: "#{version}-#{environment}-orange", dark: true)
+  end
+
+  private_lane :firebase_app_dist do |options|
+    app_id = options[:app_id]
+    scheme = options[:scheme]
+    current = options[:current] || ""
+
+    branch = "master"
+    script = "../script/make-release-note.sh"
+    sh("chmod 755 #{script}")
+    sh("git fetch origin")
+    note = sh("#{script} #{branch} #{current}")
+    firebase_app_distribution(
+      app: app_id,
+      release_notes: note,
+      firebase_cli_path: "./node_modules/.bin/firebase",
+      firebase_cli_token: ENV["FIREBASE_TOKEN"]
+    )
+  end
+end
