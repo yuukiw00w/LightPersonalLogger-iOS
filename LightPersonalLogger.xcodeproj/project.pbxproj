@@ -11,7 +11,6 @@
 		2A837D1B265F08FE00F064FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1A265F08FE00F064FE /* AppDelegate.swift */; };
 		2A837D1D265F08FE00F064FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1C265F08FE00F064FE /* SceneDelegate.swift */; };
 		2A837D1F265F08FE00F064FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A837D1E265F08FE00F064FE /* ViewController.swift */; };
-		2A837D22265F08FE00F064FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D20265F08FE00F064FE /* Main.storyboard */; };
 		2A837D24265F08FF00F064FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D23265F08FF00F064FE /* Images.xcassets */; };
 		2A837D27265F08FF00F064FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */; };
 		2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A837D4B265F0EF600F064FE /* Colors.xcassets */; };
@@ -31,7 +30,6 @@
 		2A837D1A265F08FE00F064FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A837D1C265F08FE00F064FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A837D1E265F08FE00F064FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A837D21265F08FE00F064FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A837D23265F08FF00F064FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2A837D26265F08FF00F064FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A837D28265F08FF00F064FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */,
-				2A837D20265F08FE00F064FE /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 				2A837D4C265F0EF600F064FE /* Colors.xcassets in Resources */,
 				2A837D24265F08FF00F064FE /* Images.xcassets in Resources */,
 				2A837D70265F11E700F064FE /* Settings.bundle in Resources */,
-				2A837D22265F08FE00F064FE /* Main.storyboard in Resources */,
 				2A304DF526633F15007A903D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,14 +416,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2A837D20265F08FE00F064FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A837D21265F08FE00F064FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A837D25265F08FF00F064FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
