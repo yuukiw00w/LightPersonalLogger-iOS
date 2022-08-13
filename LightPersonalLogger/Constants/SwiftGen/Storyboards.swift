@@ -15,7 +15,7 @@ internal enum StoryboardScene {
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 
-    internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
+    internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: Self.self)
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

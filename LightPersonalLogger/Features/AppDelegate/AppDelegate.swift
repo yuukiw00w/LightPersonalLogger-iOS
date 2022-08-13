@@ -5,7 +5,7 @@
 //  Created by Yuki Noseda on 2021/05/27.
 //
 
-import Firebase
+import FirebaseCore
 import UIKit
 
 @main

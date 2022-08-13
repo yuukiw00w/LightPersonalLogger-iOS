@@ -7,8 +7,8 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'LightPersonalLogger' do
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseCrashlytics'
   pod 'LicensePlist'
   pod 'SwiftFormat/CLI'
   pod 'SwiftGen'
@@ -18,11 +18,6 @@ end
 post_install do | installer |
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      # https://stackoverflow.com/questions/63607158/xcode-12-building-for-ios-simulator-but-linking-in-object-file-built-for-ios
-      # https://github.com/realm/realm-cocoa/issues/6685#issuecomment-695915227
-      # Xcode 12でarm64対応するようにビルドしちゃってエラーになるのでexclude 
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
- 
       # https://qiita.com/temoki/items/46ad22940e819a132435
       # Xcode 12でiOS8が切られてなおiOS8をサポートしてるライブラリがあるため
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
